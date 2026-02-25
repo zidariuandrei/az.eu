@@ -1,64 +1,63 @@
 <script lang="ts">
-	let { id = '' } = $props();
+let { id = "" } = $props();
 
-	let sectionElement: HTMLElement;
-	let expandedJob = $state<number | null>(null);
+let sectionElement: HTMLElement;
+let expandedJob = $state<number | null>(null);
 
-	const experiences = [
-		{
-			company: 'd.velop Eastern Europe',
-			role: 'Senior Frontend Developer',
-			location: 'Timişoara, Timiş, Romania · Hybrid',
-			period: 'Jul 2025 - Present',
-			points: [
-				'Architecting and developing a Contract Management System using SvelteKit with microservices architecture.',
-				'Leading component design and structural implementation, establishing consistent design systems and reusable UI components.',
-				'Owning and delivering multiple critical functionalities, ensuring robust implementation and seamless integration with backend services.',
-				'Implementing Material Design principles to create intuitive, accessible user interfaces.'
-			]
-		},
-		{
-			company: 'IkonSoft',
-			role: 'Senior Fullstack Engineer',
-			location: 'Cluj-Napoca (Remote)',
-			period: 'Jan 2024 - Jun 2025',
-			points: [
-				'Developed core functionalities for clinical studies projects in US Healthcare sector, ensuring strict compliance with 21CFR-Part 11 and HIPAA.',
-				'Collaborated effectively within a fast-paced environment, developing features using Strapi, Apollo GraphQL, TypeScript, Vue, Nuxt, and Tailwind CSS.',
-				'Designed and implemented robust, human-readable audit trails with redundancy checks, significantly enhancing system security and data integrity.',
-				'Implemented key backend security middlewares to fortify server defenses and prevent unauthorized access.',
-				'Implemented end-to-end Clinical Subject Portal, enabling subjects to autonomously schedule and manage visits.',
-				'Engineered a system-wide UI/UX overhaul, implementing modern design principles to ensure consistency and meet accessibility standards.'
-			]
-		},
-		{
-			company: 'IkonSoft',
-			role: 'Team Lead Developer',
-			location: 'Cluj-Napoca (Remote)',
-			period: 'Jan 2022 - Jan 2024',
-			points: [
-				'Promoted to Team Lead Developer to spearhead rapid onboarding and upskilling of two junior engineers.',
-				'Led, mentored, and managed a growing team (from 4 to 6 members), directly contributing to a doubling of client base.',
-				'Orchestrated and managed development across diverse projects with varied technology stacks, fostering strong team synergy.'
-			]
-		},
-		{
-			company: 'IkonSoft',
-			role: 'Junior Developer',
-			location: 'Cluj-Napoca (Remote)',
-			period: 'Mar 2021 - Jan 2022',
-			points: [
-				'Engineered and maintained a critical Patient Portal as a fullstack developer.',
-				'Developed and integrated highly complex features such as decision tree systems, modular plugin architectures, and secure payment gateways.',
-				'Maintained and optimized system performance to handle peak loads exceeding 1 million user interactions per month.'
-			]
-		}
-	];
+const experiences = [
+	{
+		company: "d.velop Eastern Europe",
+		role: "Senior Frontend Developer",
+		location: "Timişoara, Timiş, Romania · Hybrid",
+		period: "Jul 2025 - Present",
+		points: [
+			"Developing a Contract Management System using SvelteKit with microservices architecture.",
+			"Deep in component design and structural implementation, establishing consistent design systems and reusable UI components.",
+			"Owning and delivering multiple critical functionalities, ensuring robust implementation and seamless integration with backend services.",
+			"Implementing Material Design principles to create intuitive, accessible user interfaces.",
+		],
+	},
+	{
+		company: "IkonSoft",
+		role: "Senior Fullstack Engineer",
+		location: "Cluj-Napoca (Remote)",
+		period: "Jan 2024 - Jun 2025",
+		points: [
+			"Developed core functionalities for clinical studies projects in US Healthcare sector, ensuring strict compliance with 21CFR-Part 11 and HIPAA.",
+			"Collaborated effectively within a fast-paced environment, developing features using Strapi, Apollo GraphQL, TypeScript, Vue, Nuxt, and Tailwind CSS.",
+			"Designed and implemented robust, human-readable audit trails with redundancy checks, significantly enhancing system security and data integrity.",
+			"Implemented key backend security middlewares to fortify server defenses and prevent unauthorized access.",
+			"Implemented end-to-end Clinical Subject Portal, enabling subjects to autonomously schedule and manage visits.",
+			"Engineered a system-wide UI/UX overhaul, implementing modern design principles to ensure consistency and meet accessibility standards.",
+		],
+	},
+	{
+		company: "IkonSoft",
+		role: "Team Lead Developer",
+		location: "Cluj-Napoca (Remote)",
+		period: "Jan 2022 - Jan 2024",
+		points: [
+			"Promoted to Team Lead Developer to spearhead rapid onboarding and upskilling of two junior engineers.",
+			"Led, mentored, and managed a growing team (from 4 to 6 members), directly contributing to a doubling of client base.",
+			"Orchestrated and managed development across diverse projects with varied technology stacks, fostering strong team synergy.",
+		],
+	},
+	{
+		company: "IkonSoft",
+		role: "Junior Developer",
+		location: "Cluj-Napoca (Remote)",
+		period: "Mar 2021 - Jan 2022",
+		points: [
+			"Engineered and maintained a critical Patient Portal as a fullstack developer.",
+			"Developed and integrated highly complex features such as decision tree systems, modular plugin architectures, and secure payment gateways.",
+			"Maintained and optimized system performance to handle peak loads exceeding 1 million user interactions per month.",
+		],
+	},
+];
 
-	function toggleJob(index: number) {
-		expandedJob = expandedJob === index ? null : index;
-	}
-
+function toggleJob(index: number) {
+	expandedJob = expandedJob === index ? null : index;
+}
 </script>
 
 <section class="section" {id}>

@@ -57,7 +57,7 @@
 		<p class="hero-location">Timisoara, Romania · d.velop Eastern Europe</p>
 		<div class="hero-about">
 			<p>
-				Architecting and developing a Contract Management System using SvelteKit with microservices architecture. I create open-source tools like <strong>tane·</strong> (AI startup validator), <strong>zu·</strong> (System Architect), <strong>shiori·</strong> (travel journaling), <strong>sumi·</strong> (ebook reader), and <strong>kigo·</strong> (typing tutor).
+    			Developing a Contract Management System using SvelteKit with microservices architecture. I create open-source tools like <strong>tane·</strong> (AI startup validator), <strong>zu·</strong> (System Architect), <strong>shiori·</strong> (travel journaling), <strong>sumi·</strong> (ebook reader), and <strong>kigo·</strong> (typing tutor).
 			</p>
 			<p>
 				Previously led development of complex healthcare applications, navigating regulatory requirements while delivering scalable solutions. A hands-on expert in modern JavaScript ecosystems, driving engineering excellence through collaborative leadership.
