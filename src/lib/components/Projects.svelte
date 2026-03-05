@@ -36,6 +36,13 @@
 				'Terminal-based typing tutor (TUI) written in Go. Designed for split keyboards with real-time statistics, multiple themes, and local leaderboards.',
 			tags: ['Go', 'TUI', 'Terminal', 'CLI'],
 			link: 'https://github.com/zidariuandrei/kigo'
+		},
+		{
+			title: 'hachi· (八)',
+			description:
+				'A high-performance, pixel-perfect CHIP-8 interpreter written in Go using the Ebitengine game framework. Focused on clean architectural patterns and precise hardware emulation.',
+			tags: ['Go', 'Emulation', 'Ebitengine', 'Systems'],
+			link: 'https://github.com/zidariuandrei/CHIP-8'
 		}
 	];
 </script>
