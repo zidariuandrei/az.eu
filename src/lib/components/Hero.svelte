@@ -1,29 +1,29 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
+import { onMount } from "svelte";
 
-	let heroElement: HTMLElement;
+let heroElement: HTMLElement;
 
-	onMount(() => {
-		setTimeout(() => {
-			if (heroElement) {
-				heroElement.classList.add('active');
+onMount(() => {
+	setTimeout(() => {
+		if (heroElement) {
+			heroElement.classList.add("active");
+		}
+	}, 100);
+
+	const handleScroll = () => {
+		const nav = document.querySelector(".nav");
+		if (nav) {
+			if (window.scrollY > 50) {
+				nav.classList.add("scrolled");
+			} else {
+				nav.classList.remove("scrolled");
 			}
-		}, 100);
+		}
+	};
 
-		const handleScroll = () => {
-			const nav = document.querySelector('.nav');
-			if (nav) {
-				if (window.scrollY > 50) {
-					nav.classList.add('scrolled');
-				} else {
-					nav.classList.remove('scrolled');
-				}
-			}
-		};
-
-		window.addEventListener('scroll', handleScroll);
-		return () => window.removeEventListener('scroll', handleScroll);
-	});
+	window.addEventListener("scroll", handleScroll);
+	return () => window.removeEventListener("scroll", handleScroll);
+});
 </script>
 
 <section class="hero" bind:this={heroElement}>
@@ -57,10 +57,10 @@
 		<p class="hero-location">Timisoara, Romania · d.velop Eastern Europe</p>
 		<div class="hero-about">
 			<p>
-    			Developing a Contract Management System using SvelteKit with microservices architecture. I create open-source tools like <strong>tane·</strong> (AI startup validator), <strong>zu·</strong> (System Architect), <strong>shiori·</strong> (travel journaling), <strong>sumi·</strong> (ebook reader), <strong>kigo·</strong> (typing tutor), and <strong>hachi·</strong> (CHIP-8 emulator).
+      			Developing a Contract Management System at <a href="https://www.d-velop.com/about-d-velop#top" target="_blank" rel="noopener" class="d-velop-text-link">d.velop</a> using SvelteKit with microservices architecture. In my spare time, I hack together tools like <strong>tane·</strong> (AI startup validator), <strong>zu·</strong> (System Architect), <strong>shiori·</strong> (travel journaling), <strong>sumi·</strong> (ebook reader), <strong>kigo·</strong> (typing tutor), and <strong>hachi·</strong> (CHIP-8 emulator).
 			</p>
 			<p>
-				Previously led development of complex healthcare applications, navigating regulatory requirements while delivering scalable solutions. A hands-on expert in modern JavaScript ecosystems, driving engineering excellence through collaborative leadership.
+				Previously led development of complex healthcare applications, navigating regulatory requirements while delivering scalable solutions.
 			</p>
 		</div>
 		<div class="hero-links">
@@ -219,6 +219,29 @@
 		font-weight: 500;
 	}
 
+	.hero-about .d-velop-text-link {
+		color: var(--text);
+		text-decoration: none;
+		position: relative;
+		font-weight: 500;
+		transition: all 0.2s ease;
+	}
+
+	.hero-about .d-velop-text-link::after {
+		content: '';
+		position: absolute;
+		bottom: -2px;
+		left: 0;
+		width: 0;
+		height: 1px;
+		background: var(--text);
+		transition: width 0.3s ease;
+	}
+
+	.hero-about .d-velop-text-link:hover::after {
+		width: 100%;
+	}
+
 	.hero-links {
 		display: flex;
 		gap: 1rem;
@@ -248,6 +271,11 @@
 	.hero-link svg {
 		width: 14px;
 		height: 14px;
+	}
+
+	.hero-link.d-velop-link {
+		opacity: 0.7;
+		font-size: 0.65rem;
 	}
 
 	@keyframes fadeIn {
